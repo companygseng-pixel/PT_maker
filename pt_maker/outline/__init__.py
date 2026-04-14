@@ -1,0 +1,1 @@
+"""Document → deck outline generation."""

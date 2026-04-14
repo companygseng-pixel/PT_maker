@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pt-maker"
+version = "0.1.0"
+description = "Claude-powered high-quality PPTX generator for academic, IR, and business reports"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "PT_maker contributors" }]
+dependencies = [
+  "python-pptx>=0.6.23",
+  "pymupdf>=1.24.0",
+  "pdfplumber>=0.11.0",
+  "pillow>=10.0.0",
+  "matplotlib>=3.8.0",
+  "numpy>=1.26.0",
+  "scikit-learn>=1.4.0",
+  "jsonschema>=4.21.0",
+  "requests>=2.31.0",
+  "anthropic>=0.40.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-cov>=5.0"]
+
+[project.scripts]
+pt-maker = "pt_maker.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pt_maker*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
