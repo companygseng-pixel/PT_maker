@@ -16,6 +16,13 @@ htmlcov/
 *.pptx
 !examples/*.pptx
 
+# User content (reference designs + source documents are proprietary)
+references/*
+!references/README.md
+sources/*
+!sources/README.md
+
+
 # OS
 .DS_Store
 Thumbs.db
